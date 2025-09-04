@@ -1,0 +1,23 @@
+seed: 42
+epochs: 50
+folds: [0, 1, 2, 3, 4]
+N_FOLDS: 5
+train_bs: 16
+valid_bs: 16
+train_version: ""
+
+data:
+  img_size: [512, 512]
+  crop_size: [448, 448]
+
+optim:
+  LR: 0.0001
+  ETA_MIN: 0.000001
+  WEIGHT_DECAY: 0.01
+  scheduler: CosineAnnealingLR
+
+models:
+  pretrained: true
+
+num_class: 6
+early_stop: 10
